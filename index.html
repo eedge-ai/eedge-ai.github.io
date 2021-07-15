@@ -1,13 +1,204 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-  <header>
-  <img src="Eedge-v2 copy.jpg" alt="eedge.ai" width="150" height="50">
-  </header>   
+    <title>Beta Invite Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        box-sizing: border-box;
+        overflow: hidden;
+        font-family: "Poppins";
+        /* margin: 2rem; */
+        background-image: url(betaPage/pexels-aleksandar-pasaric-325185.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .heading {
+        font-family: "Poppins";
+        font-size: 2.9em;
+      }
+
+      input {
+        border: none;
+      }
+      input:focus {
+        outline: none;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      .footer-logo > img {
+        opacity: 0.7;
+        height: auto;
+        max-width: 100%;
+        margin: -3.5em;
+      }
+      .social-icons {
+        position: fixed;
+        right: 16%;
+        width: 3%;
+        bottom: 0;
+      }
+      @media screen and (max-width: 1024px) {
+        .social-icons {
+          width: 3%;
+          right: 25%;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        .social-icons {
+          width: 5%;
+          right: 20%;
+        }
+        .heading {
+          font-size: 2.5em;
+        }
+        .footer-logo > img {
+          margin: -2em;
+          width: 20em;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .social-icons {
+          width: 6%;
+          right: 30%;
+        }
+        .heading {
+          font-size: 1.5em;
+        }
+        .footer-logo > img {
+          margin: -1.5em;
+          width: 15em;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1 style="color:#008B8B;font-family:Verdana;font-size:25px;">
-      You deserve a better career. eedge.ai helps achieve your career goals every step of the way.
-	  Stay tuned......
-    </h1>
+    <header>
+      <img
+        src="betaPage/betaLogo.png"
+        alt=""
+        class="m-2 img-fluid col-4 col-lg-2"
+      />
+    </header>
+    <main>
+      <div
+        class="
+          text-dark text-center
+          m-auto
+          mt-5
+          pt-5
+          mt-lg-5
+          fw-bold
+          col-12 col-lg-5
+          heading
+        "
+      >
+        We have seen the future of digital careers. Experience
+        <img
+          src="betaPage/logo2.svg"
+          alt=""
+          class="img-fluid col-4 align-bottom"
+        />
+        to see yours!
+      </div>
+      <div id="form">
+        <div class="text-center m-auto mt-5">
+          <input
+            type="email"
+            class="col-8 col-lg-2 px-3"
+            placeholder="Enter your email"
+            style="height: 3em"
+            name="email-input"
+            id="email-input"
+          />
+        </div>
+        <div class="text-center mt-5">
+          <button
+            type="submit"
+            class="btn btn-md rounded-pill py-2 px-5 text-dark"
+            id="submit"
+            style="background-color: rgb(13, 209, 218, 1); box-shadow: none"
+          >
+            Request Invite
+          </button>
+        </div>
+      </div>
+      <div class="col-6 col-lg-4 mx-auto text-center mt-5 fs-3 d-none" id="msg">
+        Appreciate your desire to grow! We are launching soon! You will receive
+        an invitation to try eedge.ai first!
+      </div>
+    </main>
+    <footer>
+      <div class="d-flex w-100">
+        <div class="footer-logo col-lg-3">
+          <img
+            src="betaPage/Arrows1.png"
+            alt=""
+            class="img-fluid col-4 col-lg-12"
+          />
+        </div>
+        <div class="d-flex social-icons align-items-end mb-3">
+          <a
+            href="https://www.linkedin.com/company/eedge-ai/"
+            class="col-12 mx-1 mx-lg-3"
+          >
+            <img src="betaPage/linkedin.svg" alt="" class="img-fluid" />
+          </a>
+          <a
+            href="https://www.facebook.com/eedgedotai"
+            class="col-12 mx-1 mx-lg-3"
+          >
+            <img src="betaPage/fb.svg" alt="" class="img-fluid" />
+          </a>
+          <a
+            href="https://www.instagram.com/eedge.ai/"
+            class="col-12 mx-1 mx-lg-3"
+          >
+            <img src="betaPage/insta.svg" alt="" class="img-fluid" />
+          </a>
+          <a href="https://twitter.com/eedgedotai" class="col-12 mx-1 mx-lg-3">
+            <img src="betaPage/twitter.svg" alt="" class="img-fluid" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-202394355-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-202394355-1");
+  </script>
+  <script type="module" src="index.js"></script>
 </html>
