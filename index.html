@@ -67,7 +67,7 @@
         outline: none;
       }
       footer {
-        position: fixed;
+        position: absolute;
         bottom: 0;
       }
       .footer-logo > img {
@@ -186,6 +186,11 @@
       @media screen and (max-width: 840px) and (max-height: 500px) and (orientation: landscape) {
         .social-icons {
           right: 21%;
+        }
+      }
+      @media screen and (max-height: 500px) and (orientation: portrait) {
+        footer {
+          display: none;
         }
       }
     </style>
