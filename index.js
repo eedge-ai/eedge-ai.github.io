@@ -15,7 +15,10 @@ var form = document.getElementById("form");
 var msg = document.getElementById("msg");
 button.onclick = function () {
   // console.log(input.value);
-  submit("https://d3xufznng8.execute-api.ap-south-1.amazonaws.com/dev/subscribe", input.value);
+  submit(
+    "https://d3xufznng8.execute-api.ap-south-1.amazonaws.com/dev/subscribe",
+    input.value
+  );
 };
 async function submit(url, val) {
   const data = { email: val };
@@ -25,15 +28,17 @@ async function submit(url, val) {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: 'cors',
+      mode: "cors",
       body: JSON.stringify(data),
-    }).then((res) => {
-      // console.log(res);
+    })
+      .then((res) => {
+        // console.log(res);
         form.classList.add("d-none");
         msg.classList.remove("d-none");
-    }).catch(err=>{
-      form.classList.add("d-none");
-      msg.classList.remove("d-none");
-  });
+      })
+      .catch((err) => {
+        form.classList.add("d-none");
+        msg.classList.remove("d-none");
+      });
   }
 }

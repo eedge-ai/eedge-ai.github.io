@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>eedge: future of digital career</title>
+    <title>eedge.ai: future of digital careers</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="betaPage/Arrows1.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -14,6 +15,20 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-202394355-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-202394355-1");
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -25,13 +40,16 @@
       }
       body {
         box-sizing: border-box;
-        overflow: hidden;
+        /* overflow: hidden; */
         font-family: "Poppins";
         /* margin: 2rem; */
         background-image: url(betaPage/pexels-aleksandar-pasaric-325185.jpg);
         height: 100%;
+        margin: 0;
+
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
         background-repeat: no-repeat;
       }
       .heading {
@@ -41,6 +59,9 @@
 
       input {
         border: none;
+        width: 25% !important;
+        margin: 0 auto;
+        border-radius: 25px !important;
       }
       input:focus {
         outline: none;
@@ -48,24 +69,27 @@
       footer {
         position: fixed;
         bottom: 0;
-        width: 100%;
       }
       .footer-logo > img {
         opacity: 0.7;
         height: auto;
         max-width: 100%;
-        margin: -3.5em;
+        margin: -3em;
       }
       .social-icons {
         position: fixed;
-        right: 16%;
+        right: 18%;
         width: 3%;
         bottom: 0;
       }
+
       @media screen and (max-width: 1024px) {
         .social-icons {
-          width: 3%;
+          width: 4%;
           right: 25%;
+        }
+        input {
+          width: 40% !important;
         }
       }
       @media screen and (max-width: 780px) {
@@ -80,6 +104,9 @@
           margin: -2em;
           width: 20em;
         }
+        input {
+          width: 80% !important;
+        }
       }
       @media screen and (max-width: 480px) {
         .social-icons {
@@ -92,6 +119,73 @@
         .footer-logo > img {
           margin: -1.5em;
           width: 15em;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+        }
+        footer {
+          /* position: relative;
+          margin-top: 3em;
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto; */
+          position: fixed;
+          bottom: 0;
+        }
+        footer > div {
+          justify-content: space-between;
+        }
+        .heading {
+          padding-top: 0 !important;
+        }
+        .footer-logo > img {
+          width: 14em;
+        }
+        .social-icons {
+          right: 28%;
+          position: fixed;
+        }
+      }
+      @media screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+        body {
+          display: flex;
+          flex-direction: column;
+        }
+        footer {
+          position: relative;
+          margin-top: 10em;
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 auto;
+        }
+        input {
+          width: 20em;
+        }
+        footer > div {
+          justify-content: space-between;
+        }
+        .heading {
+          font-size: 1.8em;
+        }
+        .footer-logo > img {
+          margin: 0;
+          margin-left: -1em;
+          width: 10em;
+        }
+
+        .social-icons {
+          position: relative;
+          width: 4%;
+          right: 28%;
+        }
+      }
+      @media screen and (max-width: 840px) and (max-height: 500px) and (orientation: landscape) {
+        .social-icons {
+          right: 21%;
         }
       }
     </style>
@@ -113,23 +207,18 @@
           pt-5
           mt-lg-5
           fw-bold
-          col-12 col-lg-5
+          col-12 col-lg-6 col-xl-5
           heading
         "
       >
-        We have seen the future of digital careers. Experience
-        <img
-          src="betaPage/logo2.svg"
-          alt=""
-          class="img-fluid col-4 align-bottom"
-        />
-        to see yours!
+        We have seen the future of digital careers. Experience eedge.ai to see
+        yours!
       </div>
       <div id="form">
         <div class="text-center m-auto mt-5">
           <input
             type="email"
-            class="col-8 col-lg-2 px-3"
+            class="px-3 form-control"
             placeholder="Enter your email"
             style="height: 3em"
             name="email-input"
@@ -154,7 +243,7 @@
     </main>
     <footer>
       <div class="d-flex w-100">
-        <div class="footer-logo col-lg-3">
+        <div class="footer-logo col-12">
           <img
             src="betaPage/Arrows1.png"
             alt=""
@@ -187,18 +276,8 @@
       </div>
     </footer>
   </body>
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-202394355-1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
 
-    gtag("config", "UA-202394355-1");
-  </script>
-  <script type="module" src="index.js"></script>
+  <script src="index.js"></script>
 </html>
+<!-- //bottom left logo //mobile view rotated //heading logo -> text
+//status bar logo -->
