@@ -16,7 +16,7 @@ var msg = document.getElementById("msg");
 button.onclick = function () {
   // console.log(input.value);
   submit(
-    "https://d3xufznng8.execute-api.ap-south-1.amazonaws.com/dev/subscribe",
+    "https://20ggvemxo1.execute-api.ap-south-1.amazonaws.com/dev/subscribe",
     input.value
   );
 };
