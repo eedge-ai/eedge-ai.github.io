@@ -105,16 +105,8 @@ async function submitAnalytics(url, data){
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "cors",
+      mode: "no-cors",
+      credentials:'omit',
       body: JSON.stringify(data),
     })
-      .then((res) => {
-        // console.log(res);
-        form.classList.add("d-none");
-        msg.classList.remove("d-none");
-      })
-      .catch((err) => {
-        form.classList.add("d-none");
-        msg.classList.remove("d-none");
-      });
 }
