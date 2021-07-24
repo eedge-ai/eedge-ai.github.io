@@ -29,13 +29,38 @@ video.onmouseleave = function () {
     pause.style.display = "none";
   }
 };
-video.addEventListener("play", function () {
+video.addEventListener("play", function (param) {
   play.style.display = "none";
   pause.style.display = "block";
+  submitAnalytics(
+    "https://20ggvemxo1.execute-api.ap-south-1.amazonaws.com/dev/analytics",
+    {eventName:'BetaVideoPlay'}
+  );
+  console.log('play triggered',param);
 });
-video.addEventListener("pause", function () {
+video.addEventListener("pause", function (param) {
   play.style.display = "block";
   pause.style.display = "none";
+  console.log('pause triggered',param);
+});
+// video.addEventListener("playing", function (param) {
+//   console.log('playing triggered',param);
+// });
+let videProgress=0;
+// video.addEventListener("progress", function (param) {
+//   const {currentTime, duration} =param.target;
+//   videProgress= ((currentTime*100)/duration);
+//   // console.log('videProgress',Math.floor(videProgress%25));
+//   if((Math.floor(videProgress%25)===0)){
+//     console.log('progress triggered',param.target.currentTime, param.target.duration, videProgress);
+//   }
+// });
+video.addEventListener("ended", function (param) {
+  // console.log('ended triggered',param);
+  submitAnalytics(
+    "https://20ggvemxo1.execute-api.ap-south-1.amazonaws.com/dev/analytics",
+    {eventName:'BetaVideoEnded'}
+  );
 });
 play.addEventListener("click", function () {
   video.play();
@@ -72,4 +97,24 @@ async function submit(url, val) {
         msg.classList.remove("d-none");
       });
   }
+}
+async function submitAnalytics(url, data){
+  
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        // console.log(res);
+        form.classList.add("d-none");
+        msg.classList.remove("d-none");
+      })
+      .catch((err) => {
+        form.classList.add("d-none");
+        msg.classList.remove("d-none");
+      });
 }
