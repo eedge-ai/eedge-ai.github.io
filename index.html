@@ -215,14 +215,54 @@
               <li>Unlimited Social Sharing of Your Digital Skills Identity</li>
             </ul>
           </div>
-          <div class="col-10 col-md-8 mx-auto my-5">
+          <div class="col-10 col-md-8 mx-auto my-5 position-relative">
             <video
               src="https://eedge-media.s3.ap-south-1.amazonaws.com/MARKETING+VIDEO+WITH+POLY+-+FINAL.mp4"
               class="img-fluid"
               poster="/betaPage/videothumb.png"
               style="border-radius: 25px"
+              id="video"
               controls
             ></video>
+            <div
+              class="position-absolute top-50 start-50 translate-middle"
+              id="play-btn"
+              style="transform: scale(2)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                fill="currentColor"
+                className="rounded-circle position-absolute top-50 start-50 translate-middle bi bi-play-circle-fill bg-secondary text-white"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
+                />
+              </svg>
+            </div>
+            <div
+              class="position-absolute top-50 start-50 translate-middle"
+              id="pause-btn"
+              style="transform: scale(2); display: none"
+            >
+              <!-- <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="60"
+                fill="currentColor"
+                className="bi bi-pause"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"
+                />
+              </svg> -->
+              <img
+                src="https://img.icons8.com/ios-filled/50/000000/circled-pause.png"
+              />
+            </div>
           </div>
         </div>
       </div>

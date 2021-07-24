@@ -13,6 +13,37 @@ var input = document.getElementById("email-input");
 var button = document.getElementById("submit");
 var form = document.getElementById("form");
 var msg = document.getElementById("msg");
+var play = document.getElementById("play-btn");
+var pause = document.getElementById("pause-btn");
+var video = document.getElementById("video");
+video.onmouseenter = function () {
+  if (video.paused) {
+    play.style.display = "block";
+  } else {
+    pause.style.display = "block";
+  }
+};
+video.onmouseleave = function () {
+  if (!video.paused) {
+    play.style.display = "none";
+    pause.style.display = "none";
+  }
+};
+video.addEventListener("play", function () {
+  play.style.display = "none";
+  pause.style.display = "block";
+});
+video.addEventListener("pause", function () {
+  play.style.display = "block";
+  pause.style.display = "none";
+});
+play.addEventListener("click", function () {
+  video.play();
+  play.style.display = "none";
+});
+pause.addEventListener("click", function () {
+  video.pause();
+});
 button.onclick = function () {
   // console.log(input.value);
   submit(
